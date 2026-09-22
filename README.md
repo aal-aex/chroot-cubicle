@@ -65,3 +65,6 @@ tui slack
 > [!NOTE]
 > includes pywal template for sketchybar & jankyborders 
 
+### terrible screenshot
+
+![terrible screenshot](pic.png)
