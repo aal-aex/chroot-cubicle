@@ -1,0 +1,15 @@
+# ==========================================
+# GO CONFIGURATION
+# ==========================================
+[[language]]
+name = "go"
+auto-format = true
+
+# ==========================================
+# YAML CONFIGURATION
+# ==========================================
+[[language]]
+name = "yaml"
+auto-format = true
+language-servers = ["yaml-language-server"]
+formatter = { command = "yamlfmt", args = ["-in"] }

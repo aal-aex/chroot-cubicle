@@ -1,0 +1,21 @@
+#!/bin/bash
+PYWAL_COLORS="$HOME/.cache/wal/colors-sketchybar.sh"
+if [ -f "$PYWAL_COLORS" ]; then
+  source "$PYWAL_COLORS"
+else
+  BAR_COLOR=0x40000000
+  ITEM_BG=0x44ffffff
+  ACCENT_COLOR=0xffffffff
+  ACCENT_FG=0xff000000
+  TEXT_COLOR=0xffffffff
+fi
+
+CONFIG_DIR="$HOME/.config/sketchybar"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+
+# sketchybar --add item right \
+#            --set time update_freq=10 icon=  script="$PLUGIN_DIR/time.sh" 
+
+sketchybar --add item sys_clock right \
+           --set sys_clock update_freq=10 icon= script="$PLUGIN_DIR/sys_clock"

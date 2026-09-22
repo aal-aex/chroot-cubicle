@@ -1,0 +1,20 @@
+# tw
+[notifications]
+enabled = true
+on_mention = true
+on_dm = true
+
+[animations]
+enabled = true
+smooth_scrolling = true
+typing_indicators = true
+
+[workspaces.example]
+sidebar_width = 25
+team_id = ""
+
+
+[appearance]
+theme = "ANSI Dark"
+image_protocol = "kitty"
+timestamp_format = "3:04 PM"

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+TIME="$(gdate '+%r')"
+sketchybar --set "$NAME" label="$TIME"
+
+#gdate '+%a %r %m-%d-%y'
+# PYWAL_COLORS="$HOME/.cache/wal/colors-sketchybar.sh"
+# if [ -f "$PYWAL_COLORS" ]; then
+#   source "$PYWAL_COLORS"
+# else
+#   BAR_COLOR=0x40000000
+#   ITEM_BG=0x44ffffff
+#   ACCENT_COLOR=0xffffffff
+#   ACCENT_FG=0xff000000
+#   TEXT_COLOR=0xffffffff
+# fi
+
+# CONFIG_DIR="$HOME/.config/sketchybar"
+# PLUGIN_DIR="$CONFIG_DIR/plugins"
+# ITEM_DIR="$CONFIG_DIR/items"
+
+# TIME="$(gdate '+%r')"
+
+# sketchybar --set time.sh label="$TIME"

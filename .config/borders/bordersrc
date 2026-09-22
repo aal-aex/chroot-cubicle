@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+source ~/.cache/wal/colors-sketchybar.sh
+
+# Source pywal colors if generated, otherwise fall back to default Catppuccin
+PYWAL_COLORS="$HOME/.cache/wal/colors-sketchybar.sh"
+
+if [ -f "$PYWAL_COLORS" ]; then
+  . "$PYWAL_COLORS"
+else
+  BORDER_ACTIVE=0xff89b4fa
+  BORDER_INACTIVE=0xff706fd6
+fi
+
+borders active_color="$BORDER_ACTIVE" \
+        inactive_color="$BORDER_INACTIVE" \
+        width=5.0 \
+        style=round

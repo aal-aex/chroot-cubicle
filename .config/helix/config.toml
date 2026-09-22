@@ -1,0 +1,9 @@
+# =========================================
+# THEME
+# =========================================
+ 
+theme = "base16_transparent"
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 5 # Gives a small 5-character buffer from the right border

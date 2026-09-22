@@ -1,0 +1,11 @@
+# Personal Crush configuration & local state
+.crushrc
+digest.txt
+*.log
+
+# OS & Editor artifacts
+.DS_Store
+*.swp
+*~
+.env
+tmp

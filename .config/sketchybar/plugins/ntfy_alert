@@ -1,0 +1,33 @@
+#!/bin/bash
+#TOPIC=
+
+# Infinite loop to keep the daemon alive forever
+while true; do
+  # Listen continuously to ntfy.sh stream
+  # Added --connect-timeout and --max-time (optional) to prevent hanging, 
+  # but ntfy sends keep-alives so standard timeout handling is fine.
+  curl -sN "ntfy.sh/$TOPIC/raw" | while read -r line; do
+    
+    # Ignore empty lines / keepalives
+    if [ -n "$line" ]; then
+      
+      # Truncate message to 25 characters if it's too long
+      MAX_LEN=25
+      MSG="$line"
+      if [ ${#MSG} -gt $MAX_LEN ]; then
+        MSG="${MSG:0:$MAX_LEN}…"
+      fi
+
+      # Update SketchyBar with alert icon and message
+      # sketchybar --set ntfy icon=󰂞 label="$MSG" drawing=on
+      sketchybar --set ntfy icon=󰂞 label="$MSG" drawing=on
+      
+      # Optional: Trigger terminal-notifier or alerter here if you installed them!
+      # terminal-notifier -title "New Email" -message "$MSG"
+    fi
+  done
+
+  # If we reach this point, curl died (network drop, sleep, etc.)
+  # Wait 5 seconds before trying to reconnect to avoid spamming the server or frying your CPU
+  sleep 5
+done
