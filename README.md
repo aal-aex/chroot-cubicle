@@ -12,8 +12,6 @@
 
 .dot-file escapism for those missing /home (the tty and /proc)
 
-> [!NOTE]
-> *future plans: possibly script this* 
 
 ### coreutils & up-to-date bash
 
@@ -65,6 +63,6 @@ tui slack
 > [!NOTE]
 > includes pywal template for sketchybar & jankyborders 
 
-### terrible screenshot
+### screenshot
 
-![terrible screenshot](pic.png)
+![screenshot](pic.png)
